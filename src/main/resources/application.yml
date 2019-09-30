@@ -1,0 +1,25 @@
+
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      discovery:
+        enabled: false
+      server:
+        git:
+          uri: https://github.com/MouneshBadiger/IBMconfigurations
+          #username: mounesh.gb@gmail.com
+          #password: mgbKng123@
+        encrypt:
+          enabled: true
+server:
+  port: 9999
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    enabled: true
+  instance:
+    prefer-ip-address: false
+    hostname: localhost
